@@ -3,9 +3,10 @@
 
 def getKey(val):
 	for i in szavazatok.keys():
-		if(i == val):
+		if(szavazatok[i] == val and i not in getKeyTemp):
+			getKeyTemp.append(i);
 			return i;
-
+getKeyTemp = []
 jeloltek = int(input("Jelöltek száma (max.10): "));
 szavJog = int(input("Szavazásra jogosultak száma (max.20): "));
 nemJo = 0;
@@ -40,11 +41,11 @@ print("       EREDMÉNYEK       ");
 print("------------------------");
 
 print("Szavazatra jogosultak száma:", szavJog);
-print("Összes leadott szavazat száma:", lSzaml);
-print("Érvényes szavazatok száma:", lSzaml - nemJo);
-print("Érvénytelen szavazatok száma:", nemJo);
+print("Összes leadott szavazat száma:", lSzaml - 2);
+print("Érvényes szavazatok száma:", lSzaml - nemJo - 1);
+print("Érvénytelen szavazatok száma:", nemJo - 1);
 
-ervenyesPrc = ((szavJog - nemJo) * 100) / szavJog;
+ervenyesPrc = ((lSzaml - nemJo) * 100) / szavJog;
 
 if(ervenyesPrc > 0):
 	print(f"Érvényes szavazatok százaléka: {ervenyesPrc}%, a szavazás érvényes");
@@ -54,6 +55,7 @@ else:
 print("Jelöltek eredményei:")
 print("Helyezés		Jelölt sorszáma		Szavazatszám 		Szavazat arány")
 
-for i in sorted(szavazatok.values()):
-	print(i, getKey(i))
-
+hely = 0;
+for i in sorted(szavazatok.values(), reverse = True):
+	hely += 1;
+	print(f"{hely}			{getKey(i)}			{i}			{(i * 100) / lSzaml - lSzaml - 2}%")
