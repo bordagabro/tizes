@@ -1,7 +1,7 @@
 # Fájlkezelés
 
-*Fájl megnyitása*
-    open("fájlnév", "mód")
+*Fájl megnyitása:*
+	open("fájlnév", "mód")
 
 *4 féle mód van:*
 - **r** - read, megnyitás olvasásra (alapértelmezett), ha nincs fájl -> hiba
