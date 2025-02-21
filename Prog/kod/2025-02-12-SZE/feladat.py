@@ -58,4 +58,4 @@ print("Helyezés		Jelölt sorszáma		Szavazatszám 		Szavazat arány")
 hely = 0;
 for i in sorted(szavazatok.values(), reverse = True):
 	hely += 1;
-	print(f"{hely}			{getKey(i)}			{i}			{(i * 100) / lSzaml - lSzaml - 2}%")
+	print(f"{hely}			{getKey(i)}			{i}			{(i * 100) / lSzaml - 1}%")
