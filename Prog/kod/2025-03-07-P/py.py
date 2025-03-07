@@ -2,9 +2,16 @@ fajl = open("vers.txt", "r", encoding="utf-8")
 sorok = fajl.readlines()
 sorokSzama = len(sorok)
 
+with open("szoftverfejleszto.txt", "w") as szvfejl:
+    for sor in sorok:
+        szavak = sor.split(" ")
+        for szo in szavak:
+            if("szoftverfejlesztő" in szo):
+                szvfejl.write(sor)
+
 def leghosszabb_sor():
     rtr = 0
-    rtrLen = 0;
+    rtrLen = 0
     for i in range(sorokSzama):
         sor = sorok[i]
         if(len(sor) > rtrLen):
@@ -19,19 +26,20 @@ def megszamlal():
         szavak = sor.split(" ")
         for szo in szavak:
             if("szoftver" in szo):
-                rtr += 1;
+                rtr += 1
 
     return rtr
 
 def eldontes():
-    talalt = False;
+    talalt = False
     for i in range(sorokSzama):
         sor = sorok[i]
         if(len(sor) == 25):
-            talalt = True;
-    return talalt;
+            talalt = True
+    return talalt
 
-print("Leghosszabb szó:", leghosszabb_sor());
-print("Szoftver szó előfordulása (db):", megszamlal());
-print("Van -e olyan sor ami 25 karaktert tartalmaz (True/False):", eldontes());
+print("Leghosszabb szó:", leghosszabb_sor())
+print("Szoftver szó előfordulása (db):", megszamlal())
+print("Van -e olyan sor ami 25 karaktert tartalmaz (True/False):", eldontes())
 
+fajl.close()
