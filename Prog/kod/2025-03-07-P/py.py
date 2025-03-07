@@ -1,3 +1,6 @@
+# >>>>-- JOVOHETEN TZ MINDEN EDDIGIBŐL --<<<< #  
+# (valamelyik napon, vszeg mindkettőn :c)
+
 fajl = open("/home/borda/oskola/tizes/Prog/kod/2025-03-07-P/vers.txt", "r", encoding="utf-8")
 sorok = fajl.readlines()
 sorokSzama = len(sorok)
@@ -43,8 +46,6 @@ print("Szoftver szó előfordulása (db):", megszamlal())
 print("Van -e olyan sor ami 25 karaktert tartalmaz (True/False):", eldontes())
 
 fajl.close()
-
-
 
 
 
