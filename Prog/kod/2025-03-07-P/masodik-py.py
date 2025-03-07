@@ -5,8 +5,17 @@ szamok = fajl.readlines()
 
 i = 0
 while(i < len(szamok)):
-    fajl2.write(szamok[i], "")
-    i += 1
-    fajl2.write(szamok[i], "")
-    i += 1
-    fajl2.write(szamok[i], "")
+    fajl2.write(f"{szamok[i].strip()} {szamok[i+1].strip()} {szamok[i+2].strip()}\n")
+    i += 3
+
+fajl.close()
+fajl2.close()
+
+
+
+
+
+
+
+
+
