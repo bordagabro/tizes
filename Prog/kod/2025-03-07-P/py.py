@@ -46,6 +46,3 @@ print("Szoftver szó előfordulása (db):", megszamlal())
 print("Van -e olyan sor ami 25 karaktert tartalmaz (True/False):", eldontes())
 
 fajl.close()
-
-
-
