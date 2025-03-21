@@ -42,6 +42,34 @@ Az objektum egy osztály típusú változó.
             self.xpoz = 0               // KONSTRUKTOR
             self.ypoz = 0               // KONSTRUKTOR
 
-    ember = Ember("Pista")
-    print(ember.neve)
-    print(ember.xpoz)
+    ember = Ember("Pista")              // OBJEKTUM LÉTREHOZÁSA
+    print(ember.neve)                   // >> Pista
+    print(ember.xpoz)                   // >> 0
+
+**Konstruktor:**
+Speciális függvény, amely csak az objektum első létrehozásakor van meghívva. A konstruktor neve: __init__.
+Első (vagy egyetken) paraméterként a self kulcsszót kell átadni a konstruktornakm ez arra szolgál, hogy azonosítsa az objektumok, amelyben meghívásra került, hogy hozzáférjen az objektum tulajdonságaihoz, metódusatihoz.
+Nem ad vissza értéket, és nem lehet bármikor meghívni
+
+**Osztály metódusai**
+
+    Class Ember:
+        def __init__(self, nev):
+            self.neve = nev
+            self.xpoz = 0
+            self.ypoz = 0
+
+        def mozog(self, x, y):
+            self.xpoz += x
+            self.ypoz += y
+
+    ember = Ember("Béla")       // Ember osztály létrehozása ember változóban
+
+    print(ember.xpoz)           // >> 0
+    print(ember.ypoz)           // >> 0
+
+    ember.mozog(1,4)            // Ember osztály mozog függvényének meghívása 1,4 értékkel
+
+    print(ember.xpoz)           // >> 1
+    print(ember.ypoz)           // >> 4
+
