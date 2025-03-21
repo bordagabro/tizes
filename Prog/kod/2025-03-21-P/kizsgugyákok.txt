@@ -1,0 +1,5 @@
+Név: Blöki, Kor: 11, Nem: hím
+Név: Rufusz, Kor: 5, Nem: hím
+Név: Karcsi, Kor: 10, Nem: nőstény
+Név: Géza, Kor: 3, Nem: hím
+Név: Kiss Miklós, Kor: 2, Nem: nőstény

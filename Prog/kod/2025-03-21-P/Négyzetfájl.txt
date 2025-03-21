@@ -1,0 +1,9 @@
+1 oldalhosszú négyzet kerülete: 4, területe: 1
+2 oldalhosszú négyzet kerülete: 8, területe: 4
+3 oldalhosszú négyzet kerülete: 12, területe: 9
+4 oldalhosszú négyzet kerülete: 16, területe: 16
+5 oldalhosszú négyzet kerülete: 20, területe: 25
+6 oldalhosszú négyzet kerülete: 24, területe: 36
+7 oldalhosszú négyzet kerülete: 28, területe: 49
+8 oldalhosszú négyzet kerülete: 32, területe: 64
+9 oldalhosszú négyzet kerülete: 36, területe: 81
