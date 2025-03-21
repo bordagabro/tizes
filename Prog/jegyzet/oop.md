@@ -30,6 +30,18 @@ Az objektum egy osztály típusú változó.
     class név:
         //nem maradhat üresen, pass, vagy 1 sornyi osztályt leíró karakterlánc lerül, ezt megjegyzésnek tekinti
 
-pl.:
+    // pl.:
     class Ember:
         "egy ember definíciója"
+
+**Ezt konstruktor követi**
+
+    class Ember:
+        def __init__(self, nev):        // KONSTRUKTOR
+            self.neve = nev             // KONSTRUKTOR   
+            self.xpoz = 0               // KONSTRUKTOR
+            self.ypoz = 0               // KONSTRUKTOR
+
+    ember = Ember("Pista")
+    print(ember.neve)
+    print(ember.xpoz)
